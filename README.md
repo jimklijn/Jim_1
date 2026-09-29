@@ -8,14 +8,20 @@ De bron staat in [`dashboard/regiekamer.html`](dashboard/regiekamer.html).
 
 ## Wat erop staat
 
+Het ontwerp is **Widgets**: kleurrijke tegels in een bento-raster, gekozen door Jim uit vier richtingen. De andere drie staan in [`dashboard/ontwerpen/`](dashboard/ontwerpen/).
+
 | Onderdeel | Wat het doet |
 |---|---|
+| **Hierna** | De grote tegel bovenaan: aftellen tot je volgende afspraak, met plaats, duur en wanneer je moet vertrekken. De tegel kleurt mee (kobalt werk, jade privé, framboos mail) en toont een mini-tijdlijn van je dag. |
+| **Voortgang** | Ringen voor je werkdag, werktaken en privétaken, plus de taak die te laat is, met een afvinkknop. |
+| **Wacht op jou** | Hoeveel mails op antwoord wachten en wie het langst wacht. Klik en je springt naar die mail. |
+| **Licht vandaag** | De echte tijden voor zonsopkomst, gouden uur en zonsondergang in Amsterdam, met een zonneboog. Handig voor dronebeelden. De achtergrond van de hele pagina kleurt mee met het licht buiten. |
 | **Opdrachtregel** | Typ een taak en druk op Enter. Of klik op *Laat Claude inplannen*: Claude haalt taken en afspraken uit gewone taal ("morgen 10:00 tandarts, vrijdag hotelvideo's opleveren"). |
-| **Tijdlijn** | Je dag als een montagetijdlijn, met een spoor voor afspraken, een spoor voor tijdblokken en een rode afspeelkop op het huidige moment. *Plan mijn dag* laat Claude je taken tussen je afspraken inplannen. Je ziet eerst een voorstel en neemt het met één klik over. |
+| **Tijdlijn** | Je dag met een spoor voor afspraken en een spoor voor tijdblokken, de werktijd, het gouden uur en een rode lijn voor nu. *Plan mijn dag* laat Claude je taken tussen je afspraken inplannen. Je ziet eerst een voorstel, ook als leesbaar lijstje, en neemt het met één klik over. |
 | **Taken** | Vandaag, komende week, later en klaar, te filteren op werk of privé. Wat te laat is valt op. Met één klik schuif je een taak naar morgen. |
 | **Mail** | Live uit Gmail. *Wacht op jou* toont persoonlijke mail waarop je nog niet hebt gereageerd. *Sorteer met Claude* verdeelt je inbox in antwoorden, actie, lezen en kan weg. Van elke mail kun je een taak maken, of Claude een concept-antwoord laten schrijven dat als concept in Gmail komt. Er wordt nooit iets verstuurd. |
 | **Notities** | Snel iets vastleggen, vastzetten of er een taak van maken. Daaronder je recente bestanden uit Google Drive. |
-| **Draaiboek** | De hele week in zeven kolommen. Met *Verdeel taken over de week* zet Claude losse taken op een dag waar ruimte is. |
+| **Draaiboek** | De hele week, met de zonsondergang per dag. Met *Verdeel taken over de week* zet Claude losse taken op een dag waar ruimte is. |
 
 ## Hoe het werkt
 
