@@ -47,3 +47,9 @@ Deels. Er zijn open-source dashboards, maar die draai je zelf op een server of v
 - [Super Productivity](https://github.com/johannesjo/super-productivity): open-source takenplanner met tijdregistratie en agenda-integratie.
 
 Geen van deze projecten combineert je mail, taken en agenda met een assistent die meeplant, zonder dat je zelf iets hoeft te hosten. Daarom is de Regiekamer zelf gebouwd.
+
+---
+
+# Ook in deze repo: ATEM-regie
+
+In [`atem-regie/`](atem-regie/) staat een programma voor de Mac dat naar je microfoons luistert en de ATEM Mini Pro automatisch de juiste camera laat kiezen. Het kan ook een presentatie met de spreker in een kader of ernaast in beeld zetten, en het heeft een geluidscheck die per mic advies geeft. Begin bij [`atem-regie/README.md`](atem-regie/README.md).

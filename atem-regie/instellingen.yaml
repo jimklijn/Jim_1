@@ -1,0 +1,69 @@
+# ───────────────────────────────────────────────────────────────────────────
+#  Instellingen voor de ATEM-regie
+#  Alles achter een # is uitleg. Pas alleen de getallen en namen aan.
+# ───────────────────────────────────────────────────────────────────────────
+
+atem:
+  # Het IP-adres van je ATEM Mini Pro. Staat in Blackmagic ATEM Setup (zie README).
+  # 192.168.10.240 is het adres waarmee de ATEM uit de fabriek komt.
+  ip: 192.168.10.240
+  # cut = direct wisselen (rustig en strak), mix = zachte overgang van ongeveer 1 seconde
+  overgang: cut
+
+audio:
+  # (Een deel van) de naam van je audio-interface, zoals de Mac hem noemt.
+  # Weet je het niet? Dubbelklik op "1 apparaten tonen.command".
+  # Leeg laten = de standaard-invoer van je Mac.
+  apparaat: ""
+
+# Wie zit waar? kanaal = ingang op je audio-interface (1 = eerste),
+# camera = HDMI-ingang op de ATEM waarop diegene het best in beeld is.
+# Twee mensen naast elkaar mogen dezelfde camera hebben.
+sprekers:
+  - naam: Jim
+    kanaal: 1
+    camera: 1
+  - naam: Gast 1
+    kanaal: 2
+    camera: 2
+  - naam: Gast 2
+    kanaal: 3
+    camera: 2
+  - naam: Gast 3
+    kanaal: 4
+    camera: 1
+    # correctie_db: 4     # alleen gebruiken als een mic structureel zachter is (zie geluidscheck)
+
+camera:
+  totaal: 3        # camera met het overzichtsshot (iedereen in beeld). 0 = heb ik niet.
+  presentatie: 4   # HDMI-ingang van de presentatie-laptop. 0 = heb ik niet.
+
+regie:
+  drempel_db: -42          # vanaf dit geluidsniveau telt iemand als 'aan het praten' (geluidscheck geeft advies)
+  dominant_db: 6           # zoveel dB harder dan de anderen = 'de spreker'. Hoger = vaker 'door elkaar'
+  praat_minimaal: 1.2      # seconden dat iemand moet praten voordat hij in beeld komt
+  shot_minimaal: 4.0       # seconden dat een shot minstens blijft staan (voorkomt heen-en-weer)
+  totaal_bij_stilte: 4.0   # na zoveel seconden stilte naar het totaalshot. 0 = nooit
+  totaal_bij_door_elkaar: 2.0  # na zoveel seconden door elkaar praten naar totaal. 0 = nooit
+  afwisselen_na: 30        # praat iemand langer dan dit, dan even het totaalshot voor afwisseling. 0 = uit
+
+# Met welke modus begint de regie?
+#   camera      = alleen camera's (podcast)
+#   kader       = presentatie groot, spreker in een kader
+#   naast       = spreker in beeld, presentatie groot ernaast
+#   presentatie = alleen de presentatie
+start_modus: camera
+
+# Plaats van het kader (beeld-in-beeld). Dezelfde getallen als in ATEM Software Control
+# onder Upstream Key > DVE: x = links/rechts (-16 tot 16), y = omlaag/omhoog (-9 tot 9),
+# grootte = 0 tot 1. Schuif het kader daar goed en neem de getallen hier over.
+# Staat het kader boven terwijl je onder wilde? Zet een minteken voor y (of haal het weg).
+layouts:
+  kader:           # spreker klein, rechtsonder in de presentatie
+    grootte: 0.30
+    x: 10.4
+    y: -5.5
+  naast:           # presentatie groot links; de spreker zie je rechts in het camerabeeld
+    grootte: 0.70
+    x: -4.2
+    y: 0.0
